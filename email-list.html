@@ -1,0 +1,80 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<link rel="import" href="bower_components/iron-list/iron-list.html">
+<link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+<link rel="import" href="email-item.html">
+<!--
+List of email conversations using <email-item>
+
+Example:
+
+    <my-elem></my-elem>
+
+Example:
+
+    <my-elem>
+      <h2>Hello my-elem</h2>
+    </my-elem>
+
+@demo demo/index.html
+-->
+
+<dom-module id="email-list">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+            email-item + email-item {
+                border-top: 1px solid var(--default-primary-color);
+            }
+        </style>
+        <template is="dom-repeat" items="{{emails}}">
+            <email-item
+                from="[[item.from]]"
+                to="[[item.to]]"
+                message="[[item.message]]"
+                attachments="[[item.attachments]]"
+                date="[[item.date]]"
+                message="[[item.message]]">
+            </email-item>
+        </template>
+    </template>
+    <script>
+        Polymer({
+            is: 'email-list',
+            ready: function () {
+                this.emails = [
+                  {
+                    "from": "batesingram@corporana.com",
+                    "to": "batesingram@corporana.com",
+                    "message": "Consequat nisi laborum irure ea minim reprehenderit esse elit dolor mollit tempor quis enim aliquip.",
+                    "date": "Sat Aug 21 1993 16:09:38 GMT-0400 (EDT)",
+                    "attachments": ["url1", "url2"]
+                  },
+                  {
+                    "from": "batesingram@corporana.com",
+                    "to": "batesingram@corporana.com",
+                    "message": "Do pariatur consectetur tempor amet officia culpa sunt ullamco pariatur pariatur magna ut ex duis.",
+                    "date": "Sat Nov 18 1978 02:48:15 GMT-0500 (EST)",
+                    "attachments": []
+                  },
+                  {
+                    "from": "batesingram@corporana.com",
+                    "to": "batesingram@corporana.com",
+                    "message": "Excepteur irure laboris eiusmod quis.",
+                    "date": "Sat Mar 08 1997 15:13:11 GMT-0500 (EST)",
+                    "attachments": ["url", "url2", "url3"]
+                  },
+                  {
+                    "from": "batesingram@corporana.com",
+                    "to": "batesingram@corporana.com",
+                    "message": "Voluptate occaecat mollit officia duis voluptate sunt qui velit voluptate ullamco consectetur et.",
+                    "date": "Mon Oct 24 1977 14:12:33 GMT-0400 (EDT)",
+                    "attachments": []
+                  }
+                ]
+            }
+        });
+    </script>
+</dom-module>

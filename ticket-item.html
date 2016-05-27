@@ -1,0 +1,45 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-material/paper-material.html">
+
+<dom-module id="ticket-item">
+ 	<style>
+ 		paper-card {
+ 			width: 80%;
+ 		}
+ 	</style>
+	<template>
+		<paper-material elevation="0">
+			<h3>{{title}} - {{severity}} - {{status}}</h3>
+			<h4>Body</h4>
+			<p>{{body}}</p>
+			<h4>Resolution</h4>
+			<p>{{resolution}}</p>
+			<ul>
+				<li>Created: {{created-on}}</li>
+				<li>Updated: {{updated-on}}</li>
+				<li>Assigned to: {{assigned-to}}</li>
+				<li>Tags: {{tags}}</li>
+			</ul>
+			<em>Created by - {{created-by}}</em>
+		</paper-material>
+	</template>
+	<script>
+		Polymer({
+			is: 'ticket-item',
+			properties: {
+				"title": String,
+				"body": String,
+				"resolution": String,
+				"created-on": String,
+				"severity": String,
+				"company": String,
+				"updated-on": String ,
+				"tags": Array,
+				"status": String,
+				"created-by": String,
+				"assigned-to": String,
+				"assigned-to-name": String
+			}
+		});
+	</script>
+</dom-module>
