@@ -1,0 +1,86 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../chat-item/chat-item.html">
+<!--
+A comment describing this element
+
+Example:
+
+    <my-elem></my-elem>
+
+Example:
+
+    <my-elem>
+      <h2>Hello my-elem</h2>
+    </my-elem>
+
+@demo demo/index.html
+-->
+
+<dom-module id="chat-list">
+    <template>
+        <style>
+            :host {
+                display: block;
+                max-height: 400px;
+            }
+        </style>
+            <template is="dom-repeat" items="{{messages}}"> <!-- sorting of messages by date should handles by backend -->
+                <chat-item
+                    user="{{item.user}}"
+                    message="{{item.message}}"
+                    sent="{{item.sent}}">           
+                </chat-item>
+            </template>
+         <!-- <paper-input label="Message" id="chat-input"></paper-input> -->
+    </template>
+    <script>
+        Polymer({
+            is: 'chat-list',
+            ready: function() {
+                this.messages = [
+                  {
+                    "user": "Morgan",
+                    "sent": "Sun Jul 30 1978 21:38:38 GMT+0000 (UTC)",
+                    "message": "Cupidatat consequat ipsum deserunt magna nisi Lorem. Ullamco eu eiusmod mollit sint ut culpa officia veniam pariatur excepteur consequat adipisicing consectetur. Commodo irure pariatur enim nisi ut nulla non incididunt nostrud. Ipsum proident est irure pariatur eiusmod ea minim eu est labore. Tempor amet qui sit eu ipsum quis nulla incididunt duis. Elit ut aute proident laboris enim in. Minim Lorem occaecat reprehenderit sunt esse voluptate veniam sit ea."
+                  },
+                  {
+                    "user": "Austin",
+                    "sent": "Tue Aug 02 1994 18:47:36 GMT+0000 (UTC)",
+                    "message": "Tempor quis dolore culpa et quis non voluptate ad exercitation magna dolor eu do. Nulla quis ex minim magna anim reprehenderit veniam voluptate. Culpa non ex reprehenderit exercitation do laborum deserunt deserunt sunt veniam culpa cillum. Incididunt laboris incididunt sunt eiusmod dolor. In minim anim aliquip deserunt."
+                  },
+                  {
+                    "user": "Hansen",
+                    "sent": "Tue Jun 15 1982 09:19:20 GMT+0000 (UTC)",
+                    "message": "Ut duis velit qui nulla nostrud adipisicing enim ullamco incididunt ex incididunt eu nulla. Nisi incididunt ex aute in aute laboris. Irure nulla ex excepteur culpa incididunt incididunt aute voluptate pariatur. Officia consectetur proident commodo pariatur. Consectetur elit ea do officia non ullamco fugiat mollit proident aliquip magna reprehenderit qui ea. Eu dolor nostrud aliquip proident ad eu aliquip anim magna. Esse consequat ipsum ad ipsum occaecat ex eu id consectetur tempor velit cupidatat pariatur fugiat."
+                  },
+                  {
+                    "user": "Fay",
+                    "sent": "Mon Nov 24 1986 10:37:23 GMT+0000 (UTC)",
+                    "message": "Reprehenderit ullamco aliqua exercitation duis quis. Ullamco ullamco incididunt magna tempor et ad nostrud non aliquip voluptate do. Laboris ea aute officia enim ut tempor pariatur duis anim esse cillum exercitation do. Qui commodo dolor nostrud eiusmod eu minim voluptate eu aliqua irure excepteur tempor non magna. Ipsum est consectetur eiusmod voluptate qui aute amet cupidatat enim magna proident. Magna ut laborum nostrud irure."
+                  },
+                  {
+                    "user": "Willie",
+                    "sent": "Sun Oct 24 2004 12:07:39 GMT+0000 (UTC)",
+                    "message": "Cillum ipsum quis irure Lorem laboris anim do cillum occaecat ex aute reprehenderit consequat. Minim laborum irure veniam sit pariatur dolore aliqua sint exercitation. Nisi dolor dolore sit consectetur pariatur dolore sint officia ex qui nostrud pariatur velit nisi. Dolore ullamco esse consectetur eiusmod deserunt voluptate officia non reprehenderit elit cillum esse magna veniam. Reprehenderit veniam fugiat qui qui aliquip. Exercitation deserunt dolor nulla non. Magna ad proident qui eiusmod reprehenderit eu."
+                  },
+                  {
+                    "user": "Hancock",
+                    "sent": "Sat Nov 07 2015 14:16:55 GMT+0000 (UTC)",
+                    "message": "Minim in esse occaecat laborum enim aliqua enim. In ipsum minim aliquip consequat culpa excepteur ullamco adipisicing eiusmod cupidatat. Voluptate exercitation excepteur commodo proident ullamco do laboris ipsum nulla quis est et consectetur est."
+                  },
+                  {
+                    "user": "Dickson",
+                    "sent": "Fri Mar 11 2005 06:22:50 GMT+0000 (UTC)",
+                    "message": "Eiusmod irure tempor minim magna do cillum incididunt laboris. Amet culpa id ex tempor sint minim et aliqua Lorem cupidatat labore. Veniam quis aute mollit est elit do tempor non eiusmod. Veniam anim irure voluptate ullamco qui commodo Lorem cupidatat laboris laboris amet nostrud quis. Minim et eiusmod tempor exercitation cupidatat pariatur id tempor mollit cupidatat minim cillum. Reprehenderit duis ad qui occaecat in ea fugiat."
+                  },
+                  {
+                    "user": "Beasley",
+                    "sent": "Tue Aug 12 2014 04:37:27 GMT+0000 (UTC)",
+                    "message": "Est cillum fugiat magna excepteur laboris. Et commodo exercitation proident aliqua nulla et laboris sunt ipsum veniam et. Consectetur ullamco fugiat minim voluptate excepteur proident fugiat et proident magna amet ad. Labore officia laboris nisi veniam est tempor irure Lorem proident officia excepteur. Tempor qui sint et dolor enim mollit cillum."
+                  }
+                ]
+            }
+        });
+    </script>
+</dom-module>

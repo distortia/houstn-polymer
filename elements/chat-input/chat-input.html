@@ -1,0 +1,44 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-material/paper-material.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+
+<!--
+A comment describing this element
+
+Example:
+
+    <my-elem></my-elem>
+
+Example:
+
+    <my-elem>
+      <h2>Hello my-elem</h2>
+    </my-elem>
+
+@demo demo/index.html
+-->
+
+<dom-module id="chat-input">
+	<template>
+		<style>
+			:host {
+				display: block;
+				position: absolute;
+			}
+		</style>
+		<paper-card elevation="1" animated-shadow="false">
+		  <div class="card-content">
+		  	<paper-input label="Message"></paper-input>	
+		  </div>
+		  <div class="card-actions">
+		    <paper-button raised>Send</paper-button>
+		  </div>
+		</paper-card>
+	</template>
+	<script>
+		Polymer({
+			is: 'chat-input'
+		});
+	</script>
+</dom-module>

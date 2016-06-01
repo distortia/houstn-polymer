@@ -1,0 +1,40 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<!--
+A comment describing this element
+
+Example:
+
+    <my-elem></my-elem>
+
+Example:
+
+    <my-elem>
+      <h2>Hello my-elem</h2>
+    </my-elem>
+
+@demo demo/index.html
+-->
+
+<dom-module id="chat-item">
+	<template>
+		<style>
+			:host {
+				display: block;
+			}
+		</style>
+		<paper-material elevation="0">
+			<p><h3>{{user}}:</h3> {{message}} </p>
+			<em>sent: {{sent}}</em>
+		</paper-material>
+	</template>
+	<script>
+		Polymer({
+			is: 'chat-item',
+			properties: {
+				user: String,
+				message: String,
+				sent: String
+			}
+		});
+	</script>
+</dom-module>
