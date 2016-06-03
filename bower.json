@@ -13,7 +13,8 @@
     "paper-tabs": "PolymerElements/paper-tabs#^1.5.0",
     "paper-dialog-scrollable": "PolymerElements/paper-dialog-scrollable#^1.1.4",
     "paper-input": "PolymerElements/paper-input#~1.1.11",
-    "iron-fit-behavior": "PolymerElements/iron-fit-behavior#~1.2.2"
+    "iron-fit-behavior": "PolymerElements/iron-fit-behavior#~1.2.2",
+    "iron-pages": "polymerelements/iron-pages#~1.0.7"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
